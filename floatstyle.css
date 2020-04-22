@@ -1,36 +1,41 @@
 body {
-    background-image: url("abstract-art-artistic-1020315.jpg");
-    background-size: cover;
-
+    
+    background-image: url("floating.jpeg");
+    background-size: 100%;
+    
+    
 }
 .center{
     align-items: center;
     justify-content: center;
-    display: inline-block;
-   
-
+    display: block;
     margin-top: 15%;
 }
+
 .top-row {
     justify-content: center;
     align-content: center;
-    display: block
+    display: inline-flex;   
+    width: 100%;
 }
+
 .middle-row {
     justify-content: center;
     align-content: center;
-    display: block
+    display: inline-flex;
+    width: 100%;
+    align-items: center;
 }
 .bottom-row {
+    width: 100%;
+    display: inline-flex;
     justify-content: center;
-    align-content: center;
-    display: block
-    
 }
 .switch {
     justify-content: center;
     align-content: center;
-    display: inline-flex
+    display: inline-flex;
+    width: 100%
 }
 .space {
     border: 4px solid black;

@@ -99,13 +99,13 @@ const modeChange = () => {
     change.innerHTML = "EXPLODE";
     modeFloating = false;
     document.getElement("body").style.backgroundImage = url(
-      "atomic-bomb-beach-black-and-white-73909.jpg"
+      "explode.jpg"
     );
   } else {
     change.innerHTML = "FLOAT";
     modeFloating = true;
     document.getElement("body").style.backgroundImage = url(
-      "abstract-art-artistic-1020315.jpg"
+      "floating.jpeg"
     );
   }
 };
