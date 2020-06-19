@@ -2,6 +2,7 @@
 let change = document.getElementById("32");
 let modeFloating = true;
 
+
 const explode = letter => {
   let pos = 10;
   let c = setInterval(frame, 1);
@@ -98,27 +99,35 @@ const modeChange = () => {
   if (modeFloating === true) {
     change.innerHTML = "EXPLODE";
     modeFloating = false;
-    document.getElement("body").style.backgroundImage = url(
-      "explode.jpg"
-    );
+    console.log(change)
+    console.log("triggered")
   } else {
     change.innerHTML = "FLOAT";
     modeFloating = true;
-    document.getElement("body").style.backgroundImage = url(
-      "floating.jpeg"
-    );
+   
   }
 };
 
 function moveItem(a) {
   let letter = document.getElementById(`${a.keyCode}`);
+  let all = document.getElementsByClassName("key")
   if (a.key === " ") {
     modeChange();
-  } else if (a.key === "backspace") {
-    document.getElementByClass("key").reset();
+    
+  } else if (a.key === "Backspace") {
+    
+    for (var i = 0, len = all.length; i < len; i++) {
+      var element = all[i]
+      element.style.top = ""
+      element.style.bottom = ""
+      element.style.left = ""
+      element.style.right = ""
+    }
+    console.log(all)
   } else {
     if (modeFloating) {
       floating(letter);
+      console.log(a)
     } else {
       explode(letter);
     }
